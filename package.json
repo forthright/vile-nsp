@@ -1,0 +1,34 @@
+{
+  "name": "@brentlintner/vile-nsp",
+  "version": "0.0.2",
+  "description": "A vile plugin for checking against the Node Security Project",
+  "main": "lib/index.js",
+  "scripts": {
+    "postinstall": "babel -d lib -m common src",
+    "dev": "bin/dev",
+    "test": "bin/test"
+  },
+  "keywords": [
+    "vile",
+    "security",
+    "node",
+    "project",
+    "nsp"
+  ],
+  "dependencies": {
+    "@brentlintner/vile": "~0.1.8",
+    "babel": "~5.6.14",
+    "bluebird": "~2.9.34",
+    "lodash": "~3.9.3",
+    "nsp": "~1.1.0"
+  },
+  "devDependencies": {
+    "chai": "~3.0.0",
+    "coffee-script": "~1.9.3",
+    "istanbul": "~0.3.16",
+    "mimus": "~0.1.2",
+    "mocha": "~2.2.5",
+    "sinon": "~1.15.4",
+    "sinon-chai": "~2.8.0"
+  }
+}
