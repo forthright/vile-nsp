@@ -1,16 +1,41 @@
 vile:
   ignore: [
-      "node_modules",
       ".build",
-      ".test",
       "coverage",
-      "lib"
+      "node_modules",
+      "lib",
+      "tags",
+      ".test",
+      ".ctags",
+      "circle.yml",
+      ".eslintignore",
+      ".eslintrc",
+      ".fs-lint",
+      ".jshintrc",
+      ".jshintignore",
+      "README.md",
+      ".vile.yml",
+      ".vilerc"
     ]
 
 length:
   config:
     file: 250
     line: 80
+
+coverage:
+  config:
+    path: coverage/lcov.info
+
+jshint:
+  config: .jshintrc
+  ignore: .jshintignore
+
+depcheck:
+  config:
+    ignore_dev_deps: false
+    ignore_dirs: [ ]
+    ignore_deps: [ "@brentlintner/*" ]
 
 license:
   config: [
