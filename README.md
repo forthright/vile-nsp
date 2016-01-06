@@ -52,7 +52,7 @@ nsp:
 
 - `src` is es6+ syntax compiled with [babel](https://babeljs.io)
 - `lib` generated js library
-
+
 ## Hacking
 
     cd vile-nsp
