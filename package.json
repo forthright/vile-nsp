@@ -9,7 +9,7 @@
     "dev": "bin/dev",
     "test": "bin/test",
     "test-cov": "bin/test-cov",
-    "update": "ncu -ua",
+    "update": "ncu -a",
     "vile": "vile -cpd --nodecorations"
   },
   "keywords": [
@@ -20,21 +20,21 @@
     "nsp"
   ],
   "dependencies": {
-    "@brentlintner/vile": "~0.4.1",
-    "bluebird": "~3.1.1",
-    "lodash": "~3.10.1",
-    "nsp": "~2.2.0"
+    "@brentlintner/vile": "^0.5.3",
+    "bluebird": "^3.1.1",
+    "lodash": "^3.10.1",
+    "nsp": "^2.2.0"
   },
   "devDependencies": {
-    "babel": "~5.6.14",
-    "chai": "~3.4.1",
+    "babel": "^5.6.14",
+    "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
-    "coffee-script": "~1.10.0",
-    "istanbul": "~0.4.1",
-    "mimus": "~0.1.2",
-    "mocha": "~2.3.4",
+    "coffee-script": "^1.10.0",
+    "istanbul": "^0.4.1",
+    "mimus": "^0.1.2",
+    "mocha": "^2.3.4",
     "release-it": "^2.3.1",
-    "sinon": "~1.17.2",
-    "sinon-chai": "~2.8.0"
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
   }
 }

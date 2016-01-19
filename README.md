@@ -1,6 +1,4 @@
-# vile-nsp
-
-[![Circle CI](https://circleci.com/gh/brentlintner/vile-nsp.svg?style=svg&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/brentlintner/vile-nsp)
+# vile-nsp [![Circle CI](https://circleci.com/gh/brentlintner/vile-nsp.svg?style=svg&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/brentlintner/vile-nsp)
 
 A [vile](http://vile.io) plugin for checking aginst the [node security project](https://nodesecurity.io).
 

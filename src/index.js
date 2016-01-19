@@ -38,24 +38,22 @@ let punish = (plugin_config) =>
           // TODO: test branches where properties don't exist
           let title = _.get(result, "title", "[no title]")
           let patched = _.get(result, "patched_versions", "?")
-          let dep_of = _.trim(_.get(result, "path", []).join(" > "))
+          let dep_of = _.trim(_.get(result, "path", []).join(" => "))
+          let name = _.get(result, "module")
+          let version = _.get(result, "version")
 
-          return vile.issue(
-            // TODO: send vile.DEPENDENCY when implemented
-            vile.ERROR,
-            PACKAGE_JSON,
-            `${ title } (${ dep_of }) (patched in ${ patched })`,
-            undefined,
-            undefined, {
-              module: _.get(result, "module"),
-              link: _.get(result, "advisory"),
-              path: _.get(result, "path"),
-              title: _.get(result, "title"),
-              version: _.get(result, "version"),
-              vulnerable: _.get(result, "vulnerable_versions"),
-              patched: _.get(result, "patched_versions")
-            }
-          )
+          return vile.issue({
+            type: vile.SEC,
+            path: PACKAGE_JSON,
+            title: title,
+            message: `${ title } (${ dep_of }) (patched in ${ patched })`,
+            signature: `nsp::${name}::${version}::${title}`,
+            package: name,
+            version: version,
+            advisory: _.get(result, "advisory"),
+            vulnerable: [ _.get(result, "vulnerable_versions") ],
+            patched: [ _.get(result, "patched_versions") ]
+          })
         })
 
         resolve(issues)
