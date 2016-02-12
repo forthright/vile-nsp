@@ -2,7 +2,7 @@ let path = require("path")
 let nsp = require("nsp")
 let Promise = require("bluebird")
 let _ = require("lodash")
-let vile = require("@brentlintner/vile")
+let vile = require("@forthright/vile")
 let log = vile.logger.create("nsp")
 
 const PACKAGE_JSON = "package.json"
