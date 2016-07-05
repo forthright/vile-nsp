@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-nsp",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A vile plugin for checking against the Node Security Project",
   "main": "lib/index.js",
   "scripts": {
