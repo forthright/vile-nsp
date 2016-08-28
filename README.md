@@ -1,6 +1,6 @@
 # vile-nsp [![Circle CI](https://circleci.com/gh/forthright/vile-nsp.svg?style=svg&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/forthright/vile-nsp)
 
-[![score-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/score?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp) [![security-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/security?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp) [![coverage-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/coverage?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp) [![dependency-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/dependency?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp)
+[![score-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/score?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~brentlintner/vile-nsp) [![security-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/security?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp) [![coverage-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/coverage?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp) [![dependency-badge](https://vile.io/api/v0/users/brentlintner/vile-nsp/badges/dependency?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-nsp)
 
 A [vile](https://vile.io) plugin for checking aginst the [node security project](https://nodesecurity.io).
 
