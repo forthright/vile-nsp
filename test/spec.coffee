@@ -20,6 +20,7 @@ expect_to_call_nsp_check = (opts, check_opts, done) ->
       setTimeout ->
         expect(nsp_lib.check).to.have.been.calledWith check_opts
         done()
+  return
 
 describe "nsp", ->
   afterEach mimus.reset
@@ -33,13 +34,14 @@ describe "nsp", ->
     describe "when there is an error", (done) ->
       beforeEach -> nsp_lib.check.callsArgWith 1, error
 
-      it "logs the error", ->
+      it "logs the error", (done) ->
         nsp
           .punish {}
           .should.be.fulfilled.notify ->
             setTimeout ->
               log.error.should.have.been.calledWith error
               done()
+        return
 
     describe "with no errors", ->
       beforeEach ->
@@ -51,7 +53,7 @@ describe "nsp", ->
             .punish {}
             .should.eventually.eql nsp_issues_fixture
 
-      describe "specifying a no package/shrinkwrap file via config", (done) ->
+      describe "specifying a no package/shrinkwrap file via config", ->
         it "sets the package option", (done) ->
           check_opts = package: cwd_package_json
           expect_to_call_nsp_check {}, check_opts, done
@@ -60,8 +62,7 @@ describe "nsp", ->
         it "sets the package option", (done) ->
           opts = package: "custom/package.json"
           check_opts = package: path.join(
-            process.cwd(), "custom", "package.json"
-          )
+            process.cwd(), "custom", "package.json")
 
           expect_to_call_nsp_check opts, check_opts, done
 
