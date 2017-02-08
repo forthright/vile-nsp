@@ -6,7 +6,6 @@ nsp_issues_fixture = require "./fixtures/nsp-issues"
 nsp = mimus.require "./../lib", __dirname, [ "nsp" ]
 nsp_lib = mimus.get nsp, "nsp"
 vile = mimus.get nsp, "vile"
-log = mimus.get nsp, "log"
 
 expect = chai.expect
 cwd_package_json = path.join process.cwd(), "package.json"
@@ -26,22 +25,40 @@ describe "nsp", ->
   afterEach mimus.reset
   after mimus.restore
 
-  before -> mimus.stub log, "error"
-
   describe "#punish", ->
     error = new Error "nsp check failed"
 
     describe "when there is an error", (done) ->
-      beforeEach -> nsp_lib.check.callsArgWith 1, error
+      describe "with empty data", ->
+        beforeEach -> nsp_lib.check.callsArgWith 1, error
 
-      it "logs the error", (done) ->
-        nsp
-          .punish {}
-          .should.be.fulfilled.notify ->
-            setTimeout ->
-              log.error.should.have.been.calledWith error
-              done()
-        return
+        it "rejects with the error", ->
+          nsp
+            .punish {}
+            .should.be.rejected.with.error
+
+      describe "with bad data", ->
+        bad_data = [ {}, {}, {} ]
+
+        beforeEach ->
+          nsp_lib.check.callsArgWith 1, error, bad_data
+
+        it "does not try to parse the results", ->
+          nsp
+            .punish {}
+            .should.be.rejected.with.error
+
+    describe "with bad data (no errors)", ->
+      describe "with bad data", ->
+        bad_data = [ {}, {}, {} ]
+
+        beforeEach ->
+          nsp_lib.check.callsArgWith 1, undefined, bad_data
+
+        it "does not try to parse the results", ->
+          nsp
+            .punish {}
+            .should.eventually.eql []
 
     describe "with no errors", ->
       beforeEach ->
