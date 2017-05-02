@@ -1,8 +1,6 @@
-# vile-nsp [![Circle CI](https://circleci.com/gh/forthright/vile-nsp.svg?style=shield&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/forthright/vile-nsp)
+# vile-nsp [![Circle CI](https://circleci.com/gh/forthright/vile-nsp.svg?style=shield&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/forthright/vile-nsp) [![score-badge](https://vile.io/api/v0/projects/vile-nsp/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![security-badge](https://vile.io/api/v0/projects/vile-nsp/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![coverage-badge](https://vile.io/api/v0/projects/vile-nsp/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![dependency-badge](https://vile.io/api/v0/projects/vile-nsp/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp)
 
-[![score-badge](https://vile.io/api/v0/projects/vile-nsp/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![security-badge](https://vile.io/api/v0/projects/vile-nsp/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![coverage-badge](https://vile.io/api/v0/projects/vile-nsp/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![dependency-badge](https://vile.io/api/v0/projects/vile-nsp/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp)
-
-A [vile](https://vile.io) plugin for checking aginst the [node security project](https://nodesecurity.io).
+A [vile](https://vile.io) plugin for the [node security platform cli](https://github.com/nodesecurity/nsp).
 
 ## Requirements
 
@@ -11,7 +9,7 @@ A [vile](https://vile.io) plugin for checking aginst the [node security project]
 
 ## Installation
 
-    npm i vile-nsp
+    npm i -D vile vile-nsp
 
 ## Config
 
@@ -23,7 +21,7 @@ By default, `package.json` in the `cwd` is used.
 
 You can also specify a custom path:
 
-```yml
+```yaml
 nsp:
   config:
     package: some/other/package.json
@@ -33,7 +31,7 @@ nsp:
 
 Additionally, you can set the `shrinkwrap` path:
 
-```yml
+```yaml
 nsp:
   config:
     shrinkwrap: shrinkwrap.json
@@ -41,12 +39,49 @@ nsp:
 
 ### Offline Mode
 
-```yml
+```yaml
 nsp:
   config:
     offline: true
     advisories: "optional/path/to/advisories.json"
 ```
+
+## Versioning
+
+This project ascribes to [semantic versioning](http://semver.org).
+
+## Licensing
+
+This project is licensed under the [MPL-2.0](LICENSE) license.
+
+Any contributions made to this project are made under the current license.
+
+## Contributions
+
+Current list of [Contributors](https://github.com/forthright/vile-nsp/graphs/contributors).
+
+Any contributions are welcome and appreciated!
+
+All you need to do is submit a [Pull Request](https://github.com/forthright/vile-nsp/pulls).
+
+1. Please consider tests and code quality before submitting.
+2. Please try to keep commits clean, atomic and well explained (for others).
+
+### Issues
+
+Current issue tracker is on [GitHub](https://github.com/forthright/vile-nsp/issues).
+
+Even if you are uncomfortable with code, an issue or question is welcome.
+
+### Code Of Conduct
+
+This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
+
+By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+### Maintainers
+
+- Brent Lintner - [@brentlintner](http://github.com/brentlintner)
 
 ## Architecture
 
