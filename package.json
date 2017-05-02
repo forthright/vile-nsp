@@ -1,6 +1,6 @@
 {
   "name": "vile-nsp",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "A vile plugin for checking against the Node Security Project",
   "main": "lib/index.js",
   "files": [
