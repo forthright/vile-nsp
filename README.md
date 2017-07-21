@@ -1,11 +1,10 @@
 # vile-nsp [![Circle CI](https://circleci.com/gh/forthright/vile-nsp.svg?style=shield&circle-token=8b1bfab08e46fdf239dbb4a57d2b317d38516fe5)](https://circleci.com/gh/forthright/vile-nsp) [![score-badge](https://vile.io/api/v0/projects/vile-nsp/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![security-badge](https://vile.io/api/v0/projects/vile-nsp/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![coverage-badge](https://vile.io/api/v0/projects/vile-nsp/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp) [![dependency-badge](https://vile.io/api/v0/projects/vile-nsp/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-nsp)
 
-A [vile](https://vile.io) plugin for the [node security platform cli](https://github.com/nodesecurity/nsp).
+A [Vile](https://vile.io) plugin for tracking Node security alerts (via NSP's [CLI](https://github.com/nodesecurity/nsp)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -48,7 +47,7 @@ nsp:
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -75,8 +74,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -85,10 +82,10 @@ By participating in this project you agree to our [Code of Conduct](CODE_OF_COND
 
 ## Architecture
 
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-nsp
     npm install
