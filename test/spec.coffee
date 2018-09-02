@@ -35,7 +35,7 @@ describe "nsp", ->
         it "rejects with the error", ->
           nsp
             .punish {}
-            .should.be.rejected.with.error
+            .should.be.rejected
 
       describe "with bad data", ->
         bad_data = [ {}, {}, {} ]
@@ -46,7 +46,7 @@ describe "nsp", ->
         it "does not try to parse the results", ->
           nsp
             .punish {}
-            .should.be.rejected.with.error
+            .should.be.rejected
 
     describe "with bad data (no errors)", ->
       describe "with bad data", ->
